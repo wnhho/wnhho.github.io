@@ -95,7 +95,7 @@
 <meta property="og:site_name" content="Mr. Hao&#39;s blog">
 <meta property="og:description" content="运维小伙伴接触最多的就是linux和oracle了,学习总结下常用oracle语法如下 SQL的分类1-数据操纵语言DML主要有四种形式：12插入：INSERT    选择：SELECT 更新：UPDATE   删除：DELETE 语句：    语法名称 含义     CREATE DATABASE 创建数据库   CREATE TABLE 创建表   DROP TABLE 删除表   ALTER">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-06-22T11:00:52.475Z">
+<meta property="og:updated_time" content="2019-06-22T11:23:46.200Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Oracle 常用语句">
 <meta name="twitter:description" content="运维小伙伴接触最多的就是linux和oracle了,学习总结下常用oracle语法如下 SQL的分类1-数据操纵语言DML主要有四种形式：12插入：INSERT    选择：SELECT 更新：UPDATE   删除：DELETE 语句：    语法名称 含义     CREATE DATABASE 创建数据库   CREATE TABLE 创建表   DROP TABLE 删除表   ALTER">
@@ -409,7 +409,69 @@
 <p><strong>4-条件和排序</strong><br>使用WHERE子句<br>比较条件和between条件<br>IN,LIKE条件<br>NULL/NOT NULL 条件<br>逻辑条件与优先规则</p>
 <p><em>WHERE子句能够比较列值，文字值，算数表达式，或者函数，WHERE子句由三个元素组成 : 列名，比较条件，常量或值列表。</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">select employee_id,last_name,job_id,Department_id </span><br><span class="line">from Employees es </span><br><span class="line"><span class="built_in">where</span> Es.Department_id = 100</span><br><span class="line">--------------------------</span><br><span class="line">employee_id    LAST_NAME    JOB_ID        DEPARTMENT_ID</span><br><span class="line">108                  Greenberg      FI_mgr              100</span><br><span class="line">109                  faviet      FI_account              100</span><br><span class="line">110                  chen     FI_account               100</span><br><span class="line">111                 urman    FI_account               100</span><br><span class="line">112                  popp      FI_account               100</span><br></pre></td></tr></table></figure></p>
 <p>在WHERE子句中字符串和日期必须包含在单引号 (‘ ’) 中。但是，数字常数不应该包含在单引号中。  </p>
-<p>ORACLE SQL中的比较条件包含以下几种运算符号：<br>| 语法名称|含义<br>|-| :- |<br>|=|等于|<br>|&gt;|大于|<br>|&gt;=|大于等于|<br>|&lt;|小于|<br>|&lt;=|小于等于|<br>|&lt;&gt;|不等于|<br>|！=|不等于|<br>|^=|不等于|<br>|between…..and|在两个值之间|<br>|IN(set)|匹配一个任意值列表|<br>|LIKE|匹配一个字符模板|<br>|is null|是一个空值|<br>|is not null|不是一个空值|</p>
+<p>ORACLE SQL中的比较条件包含以下几种运算符号： </p>
+<table>
+<thead>
+<tr>
+<th>语法名称</th>
+<th style="text-align:left">含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td style="text-align:left">等于</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td style="text-align:left">大于</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td style="text-align:left">大于等于</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td style="text-align:left">小于</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td style="text-align:left">小于等于</td>
+</tr>
+<tr>
+<td>&lt;&gt;</td>
+<td style="text-align:left">不等于</td>
+</tr>
+<tr>
+<td>！=</td>
+<td style="text-align:left">不等于</td>
+</tr>
+<tr>
+<td>^=</td>
+<td style="text-align:left">不等于</td>
+</tr>
+<tr>
+<td>between…..and</td>
+<td style="text-align:left">在两个值之间</td>
+</tr>
+<tr>
+<td>IN(set)</td>
+<td style="text-align:left">匹配一个任意值列表</td>
+</tr>
+<tr>
+<td>LIKE</td>
+<td style="text-align:left">匹配一个字符模板</td>
+</tr>
+<tr>
+<td>is null</td>
+<td style="text-align:left">是一个空值</td>
+</tr>
+<tr>
+<td>is not null</td>
+<td style="text-align:left">不是一个空值</td>
+</tr>
+</tbody>
+</table>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">select last_name,salary from employees <span class="built_in">where</span> salary between 3000 and 3500</span><br><span class="line">select last_name,salary,manager_ID from employees <span class="built_in">where</span> manager_id <span class="keyword">in</span> (100,101,201);</span><br></pre></td></tr></table></figure>
 <p><strong>如果IN条件中的成员是字符或日期，它们必须放在单引号 (‘’) 中</strong><br>Select Employee_Id, Manager_Id, Department_Id   From Employees  Where Last_Name In (‘Hartstein’, ‘Vargas’); </p>
 <p><em>使用like条件</em></p>
