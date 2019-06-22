@@ -88,16 +88,17 @@
 
 
 
-<meta name="description" content="You deserve it">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Mr. Hao&#39;s blog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="jenkins 是由java编写的一款开源软件作为一款非常流的ci工作，用于构建和测试各种项目jenkins的只要功能是监控重复工作的执行，例如软件工程的构建或在cron下设置的jobs 1 -yum的repo中默认没有Jenkins，需要先将Jenkins存储库添加到yum repos，执行下面的命令：wget -O /etc/yum.repos.d/jenkins.repo https://p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自动化工具jenkins与ansible部署">
+<meta property="og:url" content="http://yoursite.com/2019/06/05/自动化工具jenkins与ansible部署/index.html">
 <meta property="og:site_name" content="Mr. Hao&#39;s blog">
-<meta property="og:description" content="You deserve it">
+<meta property="og:description" content="jenkins 是由java编写的一款开源软件作为一款非常流的ci工作，用于构建和测试各种项目jenkins的只要功能是监控重复工作的执行，例如软件工程的构建或在cron下设置的jobs 1 -yum的repo中默认没有Jenkins，需要先将Jenkins存储库添加到yum repos，执行下面的命令：wget -O /etc/yum.repos.d/jenkins.repo https://p">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-06-05T08:58:40.794Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mr. Hao&#39;s blog">
-<meta name="twitter:description" content="You deserve it">
+<meta name="twitter:title" content="自动化工具jenkins与ansible部署">
+<meta name="twitter:description" content="jenkins 是由java编写的一款开源软件作为一款非常流的ci工作，用于构建和测试各种项目jenkins的只要功能是监控重复工作的执行，例如软件工程的构建或在cron下设置的jobs 1 -yum的repo中默认没有Jenkins，需要先将Jenkins存储库添加到yum repos，执行下面的命令：wget -O /etc/yum.repos.d/jenkins.repo https://p">
 
 
 
@@ -127,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/05/自动化工具jenkins与ansible部署/">
 
 
 
 
 
-  <title>归档 | Mr. Hao's blog</title>
+  <title>自动化工具jenkins与ansible部署 | Mr. Hao's blog</title>
   
 
 
@@ -152,7 +153,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://www.wanho.club" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -267,142 +268,187 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/05/自动化工具jenkins与ansible部署/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mr .hao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="http://i1.bvimg.com/688967/eee92d67eadb404f.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr. Hao's blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">自动化工具jenkins与ansible部署</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-06-05T14:56:53+08:00">
+                2019-06-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 3 篇日志。 继续努力。
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/22/Oracle-1_常用语句/" itemprop="url">
-              
-                <span itemprop="name">Oracle 常用语句</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-22T16:59:36+08:00" content="2019-06-22">
-          06-22
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/06/05/自动化工具jenkins与ansible部署/" itemprop="url">
-              
-                <span itemprop="name">自动化工具jenkins与ansible部署</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-05T14:56:53+08:00" content="2019-06-05">
-          06-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/29/python与linux命令差异/" itemprop="url">
-              
-                <span itemprop="name">python与linux命令差异</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-29T10:53:44+08:00" content="2019-05-29">
-          05-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>jenkins 是由java编写的一款开源软件<br>作为一款非常流的ci工作，用于构建和测试各种项目<br>jenkins的只要功能是监控重复工作的执行，例如软件工程的构建<br>或在cron下设置的jobs</p>
+<p>1 -<br>yum的repo中默认没有Jenkins，需要先将Jenkins存储库添加到yum repos，执行下面的命令：<br>wget -O /etc/yum.repos.d/jenkins.repo <a href="https://pkg.jenkins.io/redhat-stable/jenkins.repo" target="_blank" rel="noopener">https://pkg.jenkins.io/redhat-stable/jenkins.repo</a><br>然后执行下面的命令：没搞清楚这是干啥用的<br>rpm –import <a href="https://pkg.jenkins.io/redhat-stable/jenkins.io.key" target="_blank" rel="noopener">https://pkg.jenkins.io/redhat-stable/jenkins.io.key</a><br>然后 安装Jenkins<br>yum install -y jenkins 默认安装最新的</p>
+<p>172.18.4.77:8080 端口来描述<br>安装jenkins<br>结束之后</p>
+<p>[root@localhost ~]# yum -y install git<br>已加载插件：langpacks, product-id, search-disabled-repos, subscription-manager<br>This system is not registered to Red Hat Subscription Management. You can use subscription-manager to register.<br>软件包 git-1.8.3.1-20.el7.x86_64 已安装并且是最新版本<br>无须任何处理</p>
+<p>[root@localhost ~]# mkdir myproject<br>[root@localhost ~]# cd myproject/<br>[root@localhost myproject]# git init<br>初始化空的 Git 版本库于 /root/myproject/.git/<br>[root@localhost myproject]# echo ‘hello world’ &gt; index.html<br>[root@localhost myproject]# git config –global user.name “zzg”<br>[root@localhost myproject]# git config –global user.email “<a href="mailto:zzg@tedu.cn" target="_blank" rel="noopener">zzg@tedu.cn</a>“</p>
 
       
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/29/python与linux命令差异/" rel="next" title="python与linux命令差异">
+                <i class="fa fa-chevron-left"></i> python与linux命令差异
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/06/22/Oracle-1_常用语句/" rel="prev" title="Oracle 常用语句">
+                Oracle 常用语句 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+        
+  <div class="bdsharebuttonbox">
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
+    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+    <a href="#" class="bds_more" data-cmd="more"></a>
+    <a class="bds_count" data-cmd="count"></a>
+  </div>
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "2",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "share": {
+        "bdSize": "16",
+        "bdStyle": "0"
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
 
 
           </div>
@@ -410,6 +456,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -667,6 +717,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
